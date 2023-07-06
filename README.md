@@ -2,6 +2,11 @@
 
 This *[Iodine](https://code.kryo.se/iodine/) Docker Image* is based on **Debian 12**.
 
+Requirements to run this image:
+- NET_ADMIN capability
+- a TUN device passed through
+- Network host mapped
+
 ## Supported tags and respective `Dockerfile` links
 
 - [`0.8.0-r0`, `latest`](https://github.com/dmachard/docker-iodine/tree/main/0.8.0)
@@ -9,9 +14,8 @@ This *[Iodine](https://code.kryo.se/iodine/) Docker Image* is based on **Debian 
 ## How to use this image
 
 Two modes of execution is available:
-- client
-- server
-Please refer to the official documentation to see all options available.
+- `client`
+- `server`
 
 ### Client mode
 
@@ -34,3 +38,8 @@ Usage: iodined [-46cDfsv] [-u user] [-t chrootdir] [-d device] [-m mtu]
                [-F pidfile] [-i max idle time] tunnel_ip[/netmask] topdomain
 ```
 
+## How to build
+
+```
+sudo docker build -t iodine .
+```

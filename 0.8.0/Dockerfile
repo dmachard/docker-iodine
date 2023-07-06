@@ -5,9 +5,9 @@ ENV NAME=iodine \
     DOWNLOAD_URL=https://code.kryo.se/iodine/iodine-0.8.0.tar.gz
 
 RUN apt-get -y update && \
-    apt-get install -y git make gcc pkg-config libz-dev net-tools && \
+    apt-get install -y curl make gcc pkg-config libz-dev net-tools && \
     curl -sSL $DOWNLOAD_URL -o iodine.tar.gz && \
-    tar xzf squid.tar.gz && \
+    tar xzf iodine.tar.gz && \
     cd $NAME-$VERSION/ && \
     make && \
     make install
