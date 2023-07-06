@@ -14,7 +14,8 @@ RUN apt-get -y update && \
 
 FROM debian:12-slim
 
-RUN apt-get install -y net-tools
+RUN apt-get -y update && \
+    apt-get install -y net-tools
 
 COPY --from=builder /usr/local/sbin/iodine /usr/local/sbin/
 COPY --from=builder /usr/local/sbin/iodined /usr/local/sbin/
