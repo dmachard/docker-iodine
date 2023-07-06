@@ -9,7 +9,7 @@ Requirements to run this image:
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`0.8.0-r2`, `latest`](https://github.com/dmachard/docker-iodine/tree/main/0.8.0)
+- [`0.8.0-r3`, `latest`](https://github.com/dmachard/docker-iodine/tree/main/0.8.0)
 
 ## How to use this image
 
