@@ -1,4 +1,4 @@
-FROM debian:12-slim as builder
+FROM debian:13-slim as builder
 
 ENV NAME=iodine \
     VERSION=0.8.0 \
@@ -12,7 +12,7 @@ RUN apt-get -y update && \
     make && \
     make install
 
-FROM debian:12-slim
+FROM debian:13-slim
 
 RUN apt-get -y update && \
     apt-get install -y net-tools
